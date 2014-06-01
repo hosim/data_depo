@@ -11,7 +11,7 @@ $ gem install data_depo
 ## Basic Usage
 
 When you write the following data file in YAML file
-as `deops/users.yml`...
+as `depots/users.yml`...
 
 ```
 - name: John Doe
@@ -30,7 +30,7 @@ you can access the contents the following manner:
 ```ruby
 require 'data_depo'
 
-DataDepo.definition_path = 'depos'
+DataDepo.definition_path = 'depots'
 DataDepo.users.each do |u|
   puts u["name"]
 end
@@ -43,7 +43,7 @@ end
 You can have multiple data files as one group.
 In case you have the following two YAML files:
 
-(`depos/users/foo.yml`)
+(`depots/users/foo.yml`)
 ```
 - name: John Doe
   email: john.doe@xxx.xx
@@ -53,7 +53,7 @@ In case you have the following two YAML files:
   password: drowssap
 ```
 
-(`depos/users/baa.yml`)
+(`depots/users/baa.yml`)
 ```
 - name: John Roe
   email: john.roe@xxx.xx
@@ -68,7 +68,7 @@ You can access contents of the both files in the same manner.
 ```ruby
 require 'data_depo'
 
-DataDepo.definition_path = 'depos'
+DataDepo.definition_path = 'depots'
 DataDepo.users.each do |u|
   puts u["name"]
 end

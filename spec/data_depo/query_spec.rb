@@ -33,7 +33,7 @@ describe DataDepo::Query do
 
       context "when no block is passed" do
         it "returns an Enumerator instance" do
-          query = described_class.new[:single]
+          query = described_class.new[:users]
           expect(query.each).to be_an_instance_of(Enumerator)
         end
       end

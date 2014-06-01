@@ -2,6 +2,12 @@
 
 `DataDepo` is data depository utility for testing, etc.
 
+## Installation
+
+```
+$ gem install data_depo
+```
+
 ## Basic Usage
 
 When you write the following data file in YAML file

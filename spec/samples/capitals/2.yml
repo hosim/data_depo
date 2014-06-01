@@ -1,0 +1,9 @@
+- state: California
+  abr: CA
+  capital: Sacramento
+- state: Colorado
+  abr: CO
+  capital: Denver
+- state: Connecticut
+  abr: CT
+  capital: Hartford

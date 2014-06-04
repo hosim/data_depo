@@ -17,6 +17,7 @@ module DataDepo
       @loader = YAMLLoader
     end
 
+    private
     def method_missing(name, *args, &block)
       return super if name.to_s[-1] == '='
 

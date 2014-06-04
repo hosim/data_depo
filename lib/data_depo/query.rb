@@ -29,6 +29,7 @@ module DataDepo
       loader.files
     end
 
+    private
     def method_missing(name, *args, &block)
       loader = DataDepo.current_loader.new(@path)
       unless loader.files.empty?

@@ -1,0 +1,14 @@
+- name: camel
+  species: mammal
+- name: capybara
+  species: mammal
+- name: cheetah
+  species: mammal
+- name: chinchilla
+  species: mammal
+- name: crane
+  species: bird
+- name: crocodile
+  species: reptile
+- name: crow
+  species: bird

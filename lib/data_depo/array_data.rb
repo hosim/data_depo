@@ -6,17 +6,20 @@ module DataDepo
       def gen(name, array)
         a = self[*array]
         nm = name.to_s.split('/').first
-        mod = if nm.respond_to?(:camelize)
-                nm.camelize
-              else
-                nm.split('_').map {|s| s.capitalize }.join
-              end
-        mod << 'Action'
-        if DataDepo.const_defined?(mod)
-          sig = class << a; self; end
-          sig.__send__(:include, DataDepo.const_get(mod))
-        end
+        mod = action_module(nm)
+        (class << a; self; end).__send__(:include, mod) if mod
         a
+      end
+
+      private
+      def action_module(name)
+        nm = if name.respond_to?(:camelize)
+               name.camelize
+             else
+               name.split('_').map {|s| s.capitalize }.join
+             end
+        nm << 'Action'
+        DataDepo.const_defined?(nm) ? DataDepo.const_get(nm) : nil
       end
     end
   end

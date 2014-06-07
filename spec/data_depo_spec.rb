@@ -122,5 +122,20 @@ describe DataDepo do
         expect(path).to eq [:foo, :baa, :baz]
       end
     end
+
+    context "when a custom action is loaded" do
+      require "#{File.dirname(__FILE__)}/samples/animals_action"
+
+      before do
+        DataDepo.definition_path = "#{File.dirname(__FILE__)}/samples"
+      end
+
+      it "returns a value with calling the custom action" do
+        query = DataDepo.animals
+        value = query.custom_action_a
+        expect(value).to be_an_instance_of(Hash)
+        expect(value.keys).to include(:mammal)
+      end
+    end
   end
 end

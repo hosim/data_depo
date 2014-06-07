@@ -1,0 +1,14 @@
+- name: baboon
+  species: mammal
+- name: barracuda
+  species: fish
+- name: bat
+  species: mammal
+- name: bear
+  species: mammal
+- name: beaver
+  species: mammal
+- name: bison
+  species: mammal
+- name: boar
+  species: mammal

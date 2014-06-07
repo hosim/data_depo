@@ -1,0 +1,12 @@
+- name: albatross
+  species: bird
+- name: alligator
+  species: reptile
+- name: alpaca
+  species: mammal
+- name: anteater
+  species: mammal
+- name: antelope
+  species: mammal
+- name: armadillo
+  species: mammal

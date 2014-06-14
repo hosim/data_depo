@@ -11,6 +11,7 @@ module DataDepo
     end
 
     def load
+      raise NotImplementedError
     end
 
     attr_reader :paths

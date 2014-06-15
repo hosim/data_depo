@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage      = "https://github.com/hosim/data_depo"
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.version       = "0.0.1"
+  s.version       = "0.0.2"
   s.license       = "MIT"
 
   s.add_development_dependency 'rspec'

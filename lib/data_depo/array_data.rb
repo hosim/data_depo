@@ -6,6 +6,7 @@ module DataDepo
       def gen(name, array)
         a = self[*array]
         nm = name.to_s.split('/').first
+        a.instance_variable_set(:@name, nm)
         mod = action_module(nm)
         (class << a; self; end).__send__(:include, mod) if mod
         a
